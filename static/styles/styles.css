@@ -1,0 +1,174 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.page {
+  background: linear-gradient(lightblue,darkgray);
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.header-container {
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.name, .title {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo {
+  height: 100px;
+  margin: 5px 10px;
+}
+
+/*END OF HEADER*/
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.code-img {
+  width: 100%;
+  display: block;
+  max-width: 900px;
+  max-height:600px;
+}
+
+/*END OF MAIN IMAGE*/
+/*--------------------------------------------------*/
+
+.about-me {
+    margin: 20px;
+    font-size: 20px;
+    display:flex;
+    justify-content: center;
+}
+
+.project-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-images {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-item {
+  border: 1px dotted black;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.proj-image {
+  display: block;
+  height: 90%;
+  width: auto;
+  border-radius: 15%;
+  max-width: 100%;
+}
+
+.proj-image-link {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+footer {
+  margin-right: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa{
+  margin: 5px;
+  color: black;
+}
+
+/* TABLET STYLES */
+@media only screen and (min-width:401px) and (max-width: 960px) {
+  .project-container {
+    justify-content: flex-start;
+  }
+
+  .project-item {
+    width: 33%;
+  }
+
+  .proj-image{
+    height: auto;
+    width: 90%;
+  }
+
+  .proj-image-link {
+    height: 100%;
+  }
+
+  a {
+    font-size: 10px;
+  }
+
+  footer {
+    width: 400px;
+  }
+}
+
+/*DESKTOP STYLES*/
+@media only screen and (min-width: 961px) {
+  .page {
+    width: 1060px;
+    margin: 0 auto;
+  }
+
+  .project-item {
+    width: 33%;
+  }
+
+  footer {
+    width: 33%;
+  }
+
+  .code-img {
+    margin: 20px;
+  }
+}
