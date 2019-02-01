@@ -219,6 +219,14 @@ function declareWinner(who) {
   } else {
     setInstructions(who);
   }
+
+  setTimeout(function() {
+  var reset = confirm('Game over! Would you like to play again?')
+  if (reset) {
+    setInstructions("New game, choose your piece.");
+    initializeGame();
+  }
+}, 300)
 }
 
 // Main AI function for computer player
