@@ -6,7 +6,8 @@
     <meta name="author" content="Christopher Giglio">
     <meta name="description" content="Personal Portfolio Website">
     <title>Christopher Giglio</title>
-    <link rel="stylesheet" type="text/css" href="/static/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="/static/styles/styles.css"> -->
     <script src="https://use.fontawesome.com/e5e0497d6e.js" async></script>
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
   </head>
@@ -82,8 +83,9 @@
                   <a class="proj-image-link" href="https://github.com/chrisgig23/TicTacToe" target="_blank">
                     <img class="proj-image" src="/static/images/tic-tac-toe.png" alt="tic tac toe">
                   </a>
-                  <a href="{{ url_for('playGame') }}"><h2>Tic-Tac-Toe</h2></a>
-                  <!-- <a href="https://github.com/chrisgig23/TicTacToe" target="_blank"><h2>Tic-Tac-Toe</h2></a> -->
+                  <h2>Tic-Tac-Toe</h2>
+                  <a href="{{ url_for('playGame') }}"></p>Play Game</p></a>
+                  <a href="https://github.com/chrisgig23/TicTacToe" target="_blank"><p>View Code</p></a>
                 </div>
               </div>
             </div>
