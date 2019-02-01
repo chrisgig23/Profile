@@ -1,6 +1,5 @@
 body {
-  background-color: blue;
-  width:400px;
+  background-color: #19aaba;
 }
 
 p {
@@ -43,7 +42,7 @@ p {
   color: yellow;
   text-align: center;
   font-size: 85px;
-  font-weight: bold;
+  /*font-weight: bold;*/
   font-family: Arial;
 }
 
@@ -74,7 +73,7 @@ p {
 
   text-align: center;
   font-size: 45px;
-  font-weight: bold;
+  /*font-weight: bold;*/
   font-family: Arial;
 }
 

@@ -39,8 +39,8 @@ function initializeGame() {
   aiPlayer = "";
   selected = false;
   gameActive = true;
-  document.getElementById('pieceX').style.backgroundColor="blue";
-  document.getElementById('pieceO').style.backgroundColor="blue";
+  document.getElementById('pieceX').style.backgroundColor="#19aaba";
+  document.getElementById('pieceO').style.backgroundColor="#19aaba";
 
   for (var i=0; i<spaces.length; i++) {
     spaces[i].getElementsByTagName("P")[0].innerHTML ='';
@@ -72,9 +72,9 @@ document.getElementById('pieceO').addEventListener('click', function() {
 // Runs when player selects their piece, updates style to reflect choice
 function selectPiece(huPlayer) {
   if (huPlayer == 'X') {
-    document.getElementById('pieceX').style.backgroundColor="red";
+    document.getElementById('pieceX').style.backgroundColor="#b31e16";
   } else if (huPlayer == 'O') {
-    document.getElementById('pieceO').style.backgroundColor="red";
+    document.getElementById('pieceO').style.backgroundColor="#b31e16";
   }
 
   document.getElementById('header').innerHTML = 'Player is using:';
@@ -166,7 +166,7 @@ function checkWin(board, player) {
 function gameOver(gameWon) {
   for (let index of winCombos[gameWon.index]) {
     document.getElementById(index).style.backgroundColor =
-      gameWon.player == huPlayer ? "green" : "red";
+      gameWon.player == huPlayer ? "green" : "#b31e16";
   }
   for (var i=0; i< spaces.length; i++) {
     spaces[i].removeEventListener('click', turnClick, false);
@@ -221,12 +221,12 @@ function declareWinner(who) {
   }
 
   setTimeout(function() {
-  var reset = confirm('Game over! Would you like to play again?')
-  if (reset) {
-    setInstructions("New game, choose your piece.");
-    initializeGame();
-  }
-}, 300)
+    var reset = confirm('Game over! Would you like to play again?')
+    if (reset) {
+      setInstructions("New game, choose your piece.");
+      initializeGame();
+    }
+  }, 300)
 }
 
 // Main AI function for computer player
