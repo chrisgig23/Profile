@@ -13,6 +13,10 @@ body {
   font-family: "Amatic SC", cursive;
 }
 
+.menu {
+  display: block;
+}
+
 .responsive {
   font-size: 40px;
   display: flex;
@@ -242,6 +246,10 @@ footer {
   .responsive li {
       float: left;
     }
+
+    .menu {
+      display: flex;
+    }
   /*End Nav-Bar*/
 }
 
@@ -312,6 +320,10 @@ footer {
 
   .responsive li {
       float: left;
+    }
+
+    .menu {
+      display: flex;
     }
   /*End Nav-Bar*/
 }
