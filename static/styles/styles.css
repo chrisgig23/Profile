@@ -5,12 +5,13 @@
 }
 
 .page {
-  background: linear-gradient(lightblue,darkgray);
+  /*background: linear-gradient(lightblue,darkgray);*/
 }
 
 body {
   /*font-family: "Barlow Condensed", sans-serif;*/
-  font-family: "Amatic SC", cursive;
+  /*font-family: "Amatic SC", cursive;*/
+  font-family: "Fira Sans", sans-serif;
 }
 
 .menu {
