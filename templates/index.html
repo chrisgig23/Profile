@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="/static/styles/styles.css">
     <script src="https://use.fontawesome.com/e5e0497d6e.js" async></script>
     <!-- <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans+Condensed:300|Fira+Sans:100" rel="stylesheet">
   </head>
 
   <body>
@@ -26,7 +26,7 @@
               <ul>
                 <li><a href='#'>About</a></li>
                 <li><a href='/static/resources/CGResume.pdf' target="_blank">Resume</a></li>
-                <li><a href='#'>Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -115,6 +115,37 @@
             </div> -->
           </div> <!-- Project Images -->
         </div> <!-- Project Container -->
+
+        <div class="empty-space">
+
+        </div>
+        
+        <div id='contact' class='contact-me'>
+          <h2 class="contact-header">Contact Me</h2>
+
+          <form id='contact-form'>
+            <div class='form-field'>
+              <p>Your Name:</p>
+              <input id='fullname' class='input' type='text' placeholder="Name" name='name'></input>
+            </div>
+            <!-- </br> -->
+            <div class='form-field'>
+              <p>Your Email:</p>
+              <input id='email' class='input' type='text' placeholder="Email Address" name='email'></input>
+            </div>
+
+            <div class='form-field'>
+              <p>Your Message:</p>
+              <input id='message' class='input' type='text' placeholder="Write your message here!" name='message'></input>
+            </div>
+
+            <div class="form-field submit">
+              <input type='submit' value='Send Message' id='submit'></input>
+            </div>
+          </form>
+
+          <a class='photo-cred' href='https://unsplash.com/photos/kD70xb1pUdg'>Photo by Tim Mossholder on Unsplash</a>
+        </div>
       </main>
 
       <footer>

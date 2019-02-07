@@ -5,12 +5,14 @@
 }
 
 .page {
-  background: linear-gradient(lightblue,darkgray);
+  /*background: linear-gradient(lightblue,darkgray);*/
 }
 
 body {
   /*font-family: "Barlow Condensed", sans-serif;*/
-  font-family: "Amatic SC", cursive;
+  /*font-family: "Amatic SC", cursive;*/
+  font-family: 'Fira Sans', sans-serif;
+
 }
 
 .menu {
@@ -75,6 +77,7 @@ li a {
 .name, .title {
   display: flex;
   justify-content: flex-end;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .logo {
@@ -157,6 +160,87 @@ li a {
   display: flex;
   justify-content: center;
   height: 100%;
+}
+
+.empty-space {
+  height: 300px;
+  background: linear-gradient(white, rgb(37,43,42));
+}
+
+.contact-me {
+  padding-top: 20px;
+  height: 400px;
+  position: relative;
+  background-color: white;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('/static/images/wave-break.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-header {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 60px;
+  border-bottom: 1px solid white;
+  display: inline-block;
+  height: 65px;
+}
+
+#contact-form p {
+  padding: 0px 5px;
+  font-weight: bold;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 0px;
+}
+
+.input {
+  width: 200px;
+}
+
+input[type=text]:focus {
+  background-color: lightgray;
+}
+
+input::placeholder {
+  padding-top: 0;
+}
+
+#message {
+  height: 95px;
+}
+
+#submit {
+  border: none;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  color: darkslategray;
+  background-color: Transparent;
+}
+
+#submit:hover {
+  text-shadow: 0 0 2px darkslategray;
+}
+
+.submit {
+  justify-content: flex-end;
+}
+
+.photo-cred {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  font-size: 10px;
 }
 
 footer {
@@ -270,7 +354,13 @@ footer {
     width: 33%;
   }
 
+  #submit {
+    color: white;
+  }
 
+  #submit:hover {
+    text-shadow: 0 0 2px white;
+  }
   footer {
     width: 33%;
   }
