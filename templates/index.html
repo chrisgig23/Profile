@@ -47,73 +47,81 @@
       <main>
         <div class="img-container">
           <div class="main-image">
-            <img class="code-img" src="/static/images/code.jpg" alt="code on screen">
+            <!-- <img class="code-img" src="/static/images/code.jpg" alt="code on screen"> -->
           </div>
         </div>
 
         <div class="about-me">
-          <!-- <p>
-            My name is Christopher Giglio. I am looking for a position as a Front End Web Developer. I have a BS degree in Computer Science from St. John's University, and have completed the Full Stack Nanodegree from Udacity.com. I have experience working as a Financial Analyst in my current position, and have worked as a VBA Programmer for my current employer. Between my university degree, online bootcamp, and real-world work experience, I have a solid understanding of common coding practices, along with a base knowledge of popular programming languages.
-
-            I've always found myself to be a problem solver, sometimes coming up with some less than usual solutions to a problem. Treating each problem like a kind of puzzle. I know there must be a solution, its a matter of reaching that solution in the way that is most efficient. I've found that this carries over to software engineering and web development, as each project presents many little problems within, whihc each require solving in order for the project as a whole to work as intended.
-
-            I enjoy exercising, grabbing a few drinks with my friends, playing video games,
-
-            Born and raised in Brooklyn, found a new home in Staten Island
-            I have cat named Leo
-          </p> -->
+          <p>
+            This is where the about me section will go, in which I will mention some things about myself for people to read and understand some things about me that might be worth knowing. Maybe a picture will go above this. 
+          </p>
         </div>
 
-        <div class="project-container">
+        <div class='project-section'>
           <h2>Featured Work</h2>
-          <div class="project-images">
-            <div class="project-item">
-              <div class="project catalog">
-                <div class="project-links">
-                  <a class="proj-image-link" href="https://github.com/chrisgig23/item-catalog/" target="_blank">
-                    <img class="proj-image" src="/static/images/sports-logo.JPG" alt="Sporting Goods Logo">
-                  </a>
-                  <a href="https://github.com/chrisgig23/item-catalog/" target="_blank"><h2>Sporting Goods Catalog App</h2></a>
+          <div class='project-list'>
+
+            <div class='project-item catalog'>
+              <div class='project-logo'>
+                <a class="proj-image-link" href="https://github.com/chrisgig23/item-catalog/" target="_blank">
+                  <img class="proj-image" src="/static/images/sports-logo.JPG" alt="Sporting Goods Logo">
+                </a>
+              </div>
+              <div class='project-info'>
+                <h3>Sporting Goods Catalog App</h3>
+                <div class='project-links'>
+                  <a href="https://github.com/chrisgig23/item-catalog/" target="_blank">View Code</a>
+                </div>
+                <div class='project-descrip'>
+                  <p>
+                    The project's description will go here and will describe the different aspects of the project for somebody to read and understand what the project does thanks to the description.
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div class="project-item">
-              <div class="project restaurants">
-                <div class="project-links">
-                  <a class="proj-image-link" href="https://github.com/chrisgig23/neighborhood-map-project/" target="_blank">
-                    <img class="proj-image" src="/static/images/food-location.png" alt="Neighborhood maps icon">
-                  </a>
-                  <a href="https://github.com/chrisgig23/neighborhood-map-project/" target="_blank"><h2>Favorite Restaurants</h2></a>
+            <div class='project-item catalog'>
+              <div class='project-logo'>
+                <a class="proj-image-link" href="https://github.com/chrisgig23/neighborhood-map-project/" target="_blank">
+                  <img class="proj-image" src="/static/images/food-location.png" alt="Neighborhood maps icon">
+                </a>
+              </div>
+              <div class='project-info'>
+                <h3>Neighborhood Restaurants App</h3>
+                <div class='project-links'>
+                  <a href="https://github.com/chrisgig23/neighborhood-map-project/" target="_blank">View Code</a>
+                </div>
+                <div class='project-descrip'>
+                  <p>
+                    The project's description will go here and will describe the different aspects of the project for somebody to read and understand what the project does thanks to the description.
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div class="project-item">
-              <div class="project tic-tac-toe">
-                <div class="project-links">
-                  <a class="proj-image-link" href="https://github.com/chrisgig23/TicTacToe" target="_blank">
-                    <img class="proj-image" src="/static/images/tic-tac-toe.png" alt="tic tac toe">
-                  </a>
-                  <h2>Tic-Tac-Toe</h2>
-                  <a href="{{ url_for('playGame') }}"></p>Play Game</p></a>
-                  <a href="https://github.com/chrisgig23/TicTacToe" target="_blank"><p>View Code</p></a>
+            <div class='project-item catalog'>
+              <div class='project-logo'>
+                <a class="proj-image-link" href="https://github.com/chrisgig23/TicTacToe" target="_blank">
+                  <img class="proj-image" src="/static/images/tic-tac-toe.png" alt="tic tac toe">
+                </a>
+              </div>
+              <div class='project-info'>
+                <h3>Sporting Goods Catalog App</h3>
+                <div class='project-links'>
+                  <a href="{{ url_for('playGame') }}">Play Game</a>
+                  <a href="https://github.com/chrisgig23/TicTacToe" target="_blank">View Code</a>
+                </div>
+                <div class='project-descrip'>
+                  <p>
+                    The project's description will go here and will describe the different aspects of the project for somebody to read and understand what the project does thanks to the description.
+                  </p>
                 </div>
               </div>
             </div>
 
+          </div>
+        </div>
 
-            <!-- <div class="project-item">
-              <div class="project coming-soon"> -->
-                <!-- <a class="proj-image-link" href=""> -->
-                  <!-- <img class="proj-image" src="/static/images/under-construction.png" alt="coming soon"> -->
-                <!-- </a> -->
-                <!-- <h2>Coming Soon!</h2> -->
-                <!-- <a href="https://github.com/udacity/Bokeh/" target="_blank">https://github.com/udacity/Bokeh/</a> -->
-              <!-- </div>
-            </div> -->
-          </div> <!-- Project Images -->
-        </div> <!-- Project Container -->
       </main>
 
       <footer>
