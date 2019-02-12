@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="author" content="Christopher Giglio">
+    <meta name="description" content="Personal Portfolio Website">
+    <title>Christopher Giglio</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}"> -->
+    <link rel="stylesheet" type="text/css" href="/static/styles/styles.css">
+    <script src="https://use.fontawesome.com/e5e0497d6e.js" async></script>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans+Condensed:300|Fira+Sans:100" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="page">
+      <header>
+        <div class="header-container">
+          <div class="menu">
+            <img class="logo" src="/static/images/deathly_hallows.png" alt="page logo">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars fa-3x"></i>
+            </a>
+            <div class="nav-bar" id="topNav">
+              <ul>
+                <li><a href='#'>About</a></li>
+                <li><a href='/static/resources/CGResume.pdf' target="_blank">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="info">
+            <div class="name">
+              <h1>
+                Christopher Giglio
+              </h1>
+            </div>
+            <div class="title">
+              <h2>
+                Web Developer
+              </h2>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {% block content %}{% endblock %}
+
+      <footer>
+        <h1>Follow along: </h1>
+        <a href="https://github.com/chrisgig23/" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/christophergiglio2/" target="_blank"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/ChrisGig" target="_blank"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/chris.giglio" target="_blank"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+      </footer>
+
+    </div> <!-- PAGE -->
+
+    <script src="/static/js/navBar.js"></script>
+  </body>
