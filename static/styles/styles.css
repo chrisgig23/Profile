@@ -60,6 +60,7 @@ li a {
   border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
+  background-color: white;
 }
 
 .info {
@@ -80,6 +81,16 @@ li a {
 
 .logo {
   display: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .page {
+  padding-top: 102px;
 }
 
 /*END OF HEADER*/
