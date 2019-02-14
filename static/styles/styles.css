@@ -103,8 +103,9 @@ li a {
 .code-img {
   width: 100%;
   display: block;
-  /*max-width: 900px;*/
-  max-height:700px;
+  max-height: 200px;
+  object-fit: cover;
+  object-position: 0 25%;
 }
 
 /*END OF MAIN IMAGE*/
@@ -194,6 +195,13 @@ li a {
   max-width: 100%;
 }*/
 
+.follow-icons {
+  margin-right: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
 footer {
   margin-right: 25px;
@@ -202,6 +210,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+
 }
 
 .fa{
@@ -238,7 +247,7 @@ footer {
     font-size: 10px;
   }*/
 
-  footer {
+  .follow-icons {
     width: 400px;
   }
 
@@ -308,7 +317,7 @@ footer {
   }*/
 
 
-  footer {
+  .follow-icons {
     width: 40%;
   }
 
