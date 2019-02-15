@@ -1,131 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="author" content="Christopher Giglio">
-    <meta name="description" content="Personal Portfolio Website">
-    <title>Christopher Giglio</title>
-    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}"> -->
-    <link rel="stylesheet" type="text/css" href="/static/styles/styles.css">
-    <script src="https://use.fontawesome.com/e5e0497d6e.js" async></script>
-    <!-- <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-  </head>
+{% extends "base.html" %}
 
-  <body>
-    <div class="page">
-      <header>
-        <div class="header-container">
-          <div class="menu">
-            <img class="logo" src="/static/images/deathly_hallows.png" alt="page logo">
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars fa-3x"></i>
-            </a>
-            <div class="nav-bar" id="topNav">
-              <ul>
-                <li><a href='#'>About</a></li>
-                <li><a href='/static/resources/CGResume.pdf' target="_blank">Resume</a></li>
-                <li><a href='#'>Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="info">
-            <div class="name">
-              <h1>
-                Christopher Giglio
-              </h1>
-            </div>
-            <div class="title">
-              <h2>
-                Web Developer
-              </h2>
-            </div>
-          </div>
-        </div>
-      </header>
-
+{% block content %}
       <main>
         <div class="img-container">
           <div class="main-image">
-            <img class="code-img" src="/static/images/code.jpg" alt="code on screen">
+            <img class="code-img" src="/static/images/code-color.jpg" alt="code on screen">
+          </div>
+        </div>
+
+
+
+        <div class='project-section'>
+          <h2>Featured Work</h2>
+          <div class='project-list'>
+
+            <div class='project-item catalog'>
+              <div class='project-logo'>
+                <a class="proj-image-link" href="https://github.com/chrisgig23/item-catalog/" target="_blank">
+                  <img class="proj-image" src="/static/images/sports-logo.JPG" alt="Sporting Goods Logo">
+                </a>
+              </div>
+              <div class='project-info'>
+                <h3>Sporting Goods Catalog App</h3>
+                <div class='project-links'>
+                  <a href="https://github.com/chrisgig23/item-catalog/" target="_blank">View Code</a>
+                </div>
+                <div class='project-descrip'>
+                  <p>
+                    A catalog application for a mock Sporting Goods business. It features a multi-page user friendly interface, a PostGreSQL database for storage, as well as Google's OAuth API for easy user log-in functionality.
+                  </p>
+                  </br>
+                  <p>
+                    Python, Flask, HTML, CSS, Google OAuth
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class='project-item catalog'>
+              <div class='project-logo'>
+                <a class="proj-image-link" href="https://github.com/chrisgig23/neighborhood-map-project/" target="_blank">
+                  <img class="proj-image" src="/static/images/food-location.png" alt="Neighborhood maps icon">
+                </a>
+              </div>
+              <div class='project-info'>
+                <h3>Neighborhood Restaurants App</h3>
+                <div class='project-links'>
+                  <a href="https://github.com/chrisgig23/neighborhood-map-project/" target="_blank">View Code</a>
+                </div>
+                <div class='project-descrip'>
+                  <p>
+                    A mobile-responsive single page javascript web application to display a number of local restaurant favorites, making use of both the Google Maps & Yelp APIs.
+                  </p>
+                </br>
+                  <p>
+                    Javascript, HTML, CSS, External APIs
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class='project-item catalog'>
+              <div class='project-logo'>
+                <a class="proj-image-link" href="https://github.com/chrisgig23/TicTacToe" target="_blank">
+                  <img class="proj-image" src="/static/images/tic-tac-toe.png" alt="tic tac toe">
+                </a>
+              </div>
+              <div class='project-info'>
+                <h3>Tic-Tac-Toe</h3>
+                <div class='project-links'>
+                  <a href="{{ url_for('playGame') }}">Play Game</a>
+                  <a href="https://github.com/chrisgig23/TicTacToe" target="_blank">View Code</a>
+                </div>
+                <div class='project-descrip'>
+                  <p>
+                    A custom approach to the classic game, which utilizes a sophisticated AI to make the computer player nearly impossible to defeat.
+                  </p>
+                </br>
+                  <p>
+                    HTML, Vanilla JS, CSS
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
         <div class="about-me">
-          <!-- <p>
-            My name is Christopher Giglio. I am looking for a position as a Front End Web Developer. I have a BS degree in Computer Science from St. John's University, and have completed the Full Stack Nanodegree from Udacity.com. I have experience working as a Financial Analyst in my current position, and have worked as a VBA Programmer for my current employer. Between my university degree, online bootcamp, and real-world work experience, I have a solid understanding of common coding practices, along with a base knowledge of popular programming languages.
 
-            I've always found myself to be a problem solver, sometimes coming up with some less than usual solutions to a problem. Treating each problem like a kind of puzzle. I know there must be a solution, its a matter of reaching that solution in the way that is most efficient. I've found that this carries over to software engineering and web development, as each project presents many little problems within, whihc each require solving in order for the project as a whole to work as intended.
-
-            I enjoy exercising, grabbing a few drinks with my friends, playing video games,
-
-            Born and raised in Brooklyn, found a new home in Staten Island
-            I have cat named Leo
-          </p> -->
+          <div class="about-me-blurb">
+            <div class="about-me-photo">
+              <img src="/static/images/self_pic.JPG" alt="Picture of Me">
+            </div>
+            <p>
+              I'm a self-taught Full-Stack Web Developer, specializing in Front End development.
+            </p>
+            <p>
+              After graduating from St. John's University, I began my career doing VBA & SQL development for an energy management firm. Since then, I have expanded my skills to include a full suite of the latest web development technologies.
+              </p>
+              <p>
+                I am looking forward to pursuing future career opportunities in web development.
+              </p>
+            </p>
+          </div>
         </div>
 
-        <div class="project-container">
-          <h2>Featured Work</h2>
-          <div class="project-images">
-            <div class="project-item">
-              <div class="project catalog">
-                <div class="project-links">
-                  <a class="proj-image-link" href="https://github.com/chrisgig23/item-catalog/" target="_blank">
-                    <img class="proj-image" src="/static/images/sports-logo.JPG" alt="Sporting Goods Logo">
-                  </a>
-                  <a href="https://github.com/chrisgig23/item-catalog/" target="_blank"><h2>Sporting Goods Catalog App</h2></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-item">
-              <div class="project restaurants">
-                <div class="project-links">
-                  <a class="proj-image-link" href="https://github.com/chrisgig23/neighborhood-map-project/" target="_blank">
-                    <img class="proj-image" src="/static/images/food-location.png" alt="Neighborhood maps icon">
-                  </a>
-                  <a href="https://github.com/chrisgig23/neighborhood-map-project/" target="_blank"><h2>Favorite Restaurants</h2></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-item">
-              <div class="project tic-tac-toe">
-                <div class="project-links">
-                  <a class="proj-image-link" href="https://github.com/chrisgig23/TicTacToe" target="_blank">
-                    <img class="proj-image" src="/static/images/tic-tac-toe.png" alt="tic tac toe">
-                  </a>
-                  <h2>Tic-Tac-Toe</h2>
-                  <a href="{{ url_for('playGame') }}"></p>Play Game</p></a>
-                  <a href="https://github.com/chrisgig23/TicTacToe" target="_blank"><p>View Code</p></a>
-                </div>
-              </div>
-            </div>
-
-
-            <!-- <div class="project-item">
-              <div class="project coming-soon"> -->
-                <!-- <a class="proj-image-link" href=""> -->
-                  <!-- <img class="proj-image" src="/static/images/under-construction.png" alt="coming soon"> -->
-                <!-- </a> -->
-                <!-- <h2>Coming Soon!</h2> -->
-                <!-- <a href="https://github.com/udacity/Bokeh/" target="_blank">https://github.com/udacity/Bokeh/</a> -->
-              <!-- </div>
-            </div> -->
-          </div> <!-- Project Images -->
-        </div> <!-- Project Container -->
       </main>
 
-      <footer>
-        <h1>Follow along: </h1>
-        <a href="https://github.com/chrisgig23/" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/christophergiglio2/" target="_blank"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
-        <a href="https://twitter.com/ChrisGig" target="_blank"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
-        <a href="https://www.facebook.com/chris.giglio" target="_blank"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
-      </footer>
-
-    </div> <!-- PAGE -->
-
-    <script src="/static/js/navBar.js"></script>
-  </body>
+{% endblock %}
