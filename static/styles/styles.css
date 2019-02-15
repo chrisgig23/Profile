@@ -8,6 +8,10 @@
   /*background: linear-gradient(lightblue,darkgray);*/
 }
 
+.sticky + main {
+  padding-top: 111px;
+}
+
 body {
   /*font-family: "Barlow Condensed", sans-serif;*/
   /*font-family: "Amatic SC", cursive;*/
@@ -113,12 +117,14 @@ li a {
 
 .about-me {
     min-height: 123px;
-    margin: 20px;
+    padding: 20px;
     font-size: 15px;
     display:flex;
     flex-direction: column;
     align-items: center;
     /*width: 100%;*/
+    background-color: #252b2a;
+    color: wheat;
 }
 
 .about-me p {
@@ -126,7 +132,6 @@ li a {
 }
 
 .about-me-blurb {
-  border-top: 1px black solid;
   border-left: none;
   margin-left: 5px;
 }
@@ -134,13 +139,17 @@ li a {
 .about-me-photo {
   width: 50%;
   text-align: center;
-  min-height: 123px;
+  /*min-height: 123px;*/
   min-width: 123px;
 }
 
 .about-me-photo img {
   width: 100%;
   border-radius: 10%;
+  max-width: 275px;
+  max-height: 275px;
+  float: left;
+  margin-right: 8px;
 }
 
 .project-section {
@@ -161,7 +170,7 @@ li a {
 .project-item {
   border: 1px dotted black;
   width: 100%;
-  height: 150px;
+  /*height: 150px;*/
   display: flex;
   /*justify-content: space-between;*/
   flex-direction: row;
@@ -221,7 +230,6 @@ li a {
 }*/
 
 .follow-icons {
-  margin-right: 25px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -229,18 +237,22 @@ li a {
 }
 
 footer {
-  margin-right: 25px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-
+  background-color: #252b2a;
+  color: wheat;
 }
 
 .fa{
   margin: 5px;
-  color: black;
+  color: wheat;
+}
+
+.fa:hover {
+  color: #3781A9;
 }
 
 /* TABLET STYLES */
@@ -253,13 +265,13 @@ footer {
 
   /*.project-container {
     justify-content: flex-start;
-  }
+  }*/
 
   .project-item {
-    width: 33%;
+    height: 150px;
   }
 
-  .proj-image{
+  /*.proj-image{
     height: auto;
     width: 90%;
   }
@@ -337,9 +349,9 @@ footer {
     margin: 5px 10px;
   }
 
-  /*.project-item {
-    width: 33%;
-  }*/
+  .project-item {
+    height: 150px;
+  }
 
 
   .about-me {
