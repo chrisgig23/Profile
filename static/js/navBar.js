@@ -31,3 +31,7 @@ hamburger.addEventListener("click", function() {
   showHideMenu();
   // Do something else, like open/close menu
 });
+
+function closeMenu() {
+  document.querySelector('.hamburger').click();
+}
