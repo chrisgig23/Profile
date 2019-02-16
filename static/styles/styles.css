@@ -115,25 +115,26 @@ li a {
 /*END OF MAIN IMAGE*/
 /*--------------------------------------------------*/
 
-.about-me {
+#about-me {
     min-height: 123px;
     padding: 20px;
     font-size: 15px;
     display:flex;
     flex-direction: column;
-    align-items: center;
+    /*align-items: center;*/
     /*width: 100%;*/
     background-color: #252b2a;
     color: wheat;
 }
 
-.about-me p {
+#about-me p {
   margin: 0px 5px;
 }
 
 .about-me-blurb {
   border-left: none;
   margin-left: 5px;
+  width: 100%;
 }
 
 .about-me-photo {
@@ -144,10 +145,8 @@ li a {
 }
 
 .about-me-photo img {
-  width: 100%;
   border-radius: 10%;
-  max-width: 275px;
-  max-height: 275px;
+  max-width: 220px;
   float: left;
   margin-right: 8px;
 }
@@ -251,6 +250,10 @@ footer {
   color: wheat;
 }
 
+.fa-bars {
+  color: black !important
+}
+
 .fa:hover {
   color: #3781A9;
 }
@@ -269,6 +272,14 @@ footer {
 
   .project-item {
     height: 150px;
+  }
+
+  .about-me-photo img {
+    max-width: 210px;
+  }
+
+  .about-me-blurb {
+    width: 100%;
   }
 
   /*.proj-image{
@@ -354,24 +365,21 @@ footer {
   }
 
 
-  .about-me {
+  #about-me {
       min-height: 123px;
-      margin: 20px 100px;
       font-size: 15px;
       display:flex;
       flex-direction: row;
-      justify-content: center;
-      width: 500px;
+      justify-content: flex-start;
+      width: 100%;
   }
 
-  .about-me p {
+  #about-me p {
     margin: 0px 5px;
   }
 
   .about-me-blurb {
-    border-left: 1px black solid;
-    border-top: none;
-    margin-left: 5px;
+    width: 417px;
   }
 
   .about-me-photo {
@@ -437,8 +445,8 @@ footer {
       float: left;
     }
 
-    .menu {
-      display: flex;
-    }
+  .menu {
+    display: flex;
+  }
   /*End Nav-Bar*/
 }
