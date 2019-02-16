@@ -8,6 +8,7 @@
     <title>Christopher Giglio</title>
     <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}"> -->
     <link rel="stylesheet" type="text/css" href="/static/styles/styles.css">
+    <link href="/static/styles/dist/hamburgers.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/e5e0497d6e.js" async></script>
     <!-- <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans+Condensed:300|Fira+Sans:100" rel="stylesheet">
@@ -19,9 +20,14 @@
         <div class="header-container">
           <div class="menu">
             <img class="logo" src="/static/images/CG_Logo.png" alt="page logo">
-            <a href="javascript:void(0);" class="icon" onclick="showHideMenu()">
+            <!-- <a href="javascript:void(0);" class="icon" onclick="showHideMenu()">
               <i class="fa fa-bars fa-3x"></i>
-            </a>
+            </a> -->
+            <button class="hamburger hamburger--emphatic" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
             <div class="nav-bar" id="topNav">
               <ul>
                 <li><a href='#about-me'>About</a></li>

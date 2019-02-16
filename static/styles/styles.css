@@ -33,7 +33,7 @@ body {
   display: none;
 }
 
-.icon {
+.hamburger {
     float: left;
     display: block;
     margin: 10px 10px;
@@ -311,7 +311,7 @@ footer {
     width: 100%;
   }
 
-  .icon {
+  .hamburger {
     display: none;
   }
 
@@ -415,7 +415,7 @@ footer {
     overflow: hidden;
   }
 
-  .icon {
+  .hamburger {
     display: none;
   }
 
