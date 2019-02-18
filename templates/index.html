@@ -1,110 +1,109 @@
 {% extends "base.html" %}
 
 {% block content %}
-      <main>
-        <div class="img-container">
-          <div class="main-image">
-            <img class="code-img" src="/static/images/code-color.jpg" alt="code on screen">
+        <main>
+          <div class="img-container">
+            <div class="main-image">
+              <img class="code-img" src="/static/images/code-color.jpg" alt="code on screen">
+            </div>
           </div>
-        </div>
 
 
 
-        <div class='project-section'>
-          <h2>Featured Work</h2>
-          <div class='project-list'>
+          <div class='project-section'>
+            <h2>Featured Work</h2>
+            <div class='project-list'>
 
-            <div class='project-item catalog'>
-              <div class='project-logo'>
-                <a class="proj-image-link" href="https://github.com/chrisgig23/item-catalog/" target="_blank">
-                  <img class="proj-image" src="/static/images/sports-logo.JPG" alt="Sporting Goods Logo">
-                </a>
-              </div>
-              <div class='project-info'>
-                <h3>Sporting Goods Catalog App</h3>
-                <div class='project-links'>
-                  <a href="https://github.com/chrisgig23/item-catalog/" target="_blank">View Code</a>
+              <div class='project-item catalog'>
+                <div class='project-logo'>
+                  <a class="proj-image-link" href="https://github.com/chrisgig23/item-catalog/" target="_blank">
+                    <img class="proj-image" src="/static/images/sports-logo.JPG" alt="Sporting Goods Logo">
+                  </a>
                 </div>
-                <div class='project-descrip'>
-                  <p>
-                    A catalog application for a mock Sporting Goods business. It features a multi-page user friendly interface, a PostGreSQL database for storage, as well as Google's OAuth API for easy user log-in functionality.
-                  </p>
+                <div class='project-info'>
+                  <h3>Sporting Goods Catalog App</h3>
+                  <div class='project-links'>
+                    <a href="https://github.com/chrisgig23/item-catalog/" target="_blank">View Code</a>
+                  </div>
+                  <div class='project-descrip'>
+                    <p>
+                      A catalog application for a mock Sporting Goods business. It features a multi-page user friendly interface, a PostGreSQL database for storage, as well as Google's OAuth API for easy user log-in functionality.
+                    </p>
+                    </br>
+                    <p>
+                      Python, Flask, HTML, CSS, Google OAuth
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class='project-item catalog'>
+                <div class='project-logo'>
+                  <a class="proj-image-link" href="https://github.com/chrisgig23/neighborhood-map-project/" target="_blank">
+                    <img class="proj-image" src="/static/images/food-location.png" alt="Neighborhood maps icon">
+                  </a>
+                </div>
+                <div class='project-info'>
+                  <h3>Neighborhood Restaurants App</h3>
+                  <div class='project-links'>
+                    <a href="https://github.com/chrisgig23/neighborhood-map-project/" target="_blank">View Code</a>
+                  </div>
+                  <div class='project-descrip'>
+                    <p>
+                      A mobile-responsive single page javascript web application to display a number of local restaurant favorites, making use of both the Google Maps & Yelp APIs.
+                    </p>
                   </br>
-                  <p>
-                    Python, Flask, HTML, CSS, Google OAuth
-                  </p>
+                    <p>
+                      Javascript, HTML, CSS, External APIs
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class='project-item catalog'>
-              <div class='project-logo'>
-                <a class="proj-image-link" href="https://github.com/chrisgig23/neighborhood-map-project/" target="_blank">
-                  <img class="proj-image" src="/static/images/food-location.png" alt="Neighborhood maps icon">
-                </a>
-              </div>
-              <div class='project-info'>
-                <h3>Neighborhood Restaurants App</h3>
-                <div class='project-links'>
-                  <a href="https://github.com/chrisgig23/neighborhood-map-project/" target="_blank">View Code</a>
+              <div class='project-item catalog'>
+                <div class='project-logo'>
+                  <a class="proj-image-link" href="https://github.com/chrisgig23/TicTacToe" target="_blank">
+                    <img class="proj-image" src="/static/images/tic-tac-toe.png" alt="tic tac toe">
+                  </a>
                 </div>
-                <div class='project-descrip'>
-                  <p>
-                    A mobile-responsive single page javascript web application to display a number of local restaurant favorites, making use of both the Google Maps & Yelp APIs.
-                  </p>
-                </br>
-                  <p>
-                    Javascript, HTML, CSS, External APIs
-                  </p>
+                <div class='project-info'>
+                  <h3>Tic-Tac-Toe</h3>
+                  <div class='project-links'>
+                    <a href="{{ url_for('playGame') }}">Play Game</a>
+                    <a href="https://github.com/chrisgig23/TicTacToe" target="_blank">View Code</a>
+                  </div>
+                  <div class='project-descrip'>
+                    <p>
+                      A custom approach to the classic game, which utilizes a minimax algorithm to make the computer player nearly impossible to defeat.
+                    </p>
+                  </br>
+                    <p>
+                      HTML, Vanilla JS, CSS
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class='project-item catalog'>
-              <div class='project-logo'>
-                <a class="proj-image-link" href="https://github.com/chrisgig23/TicTacToe" target="_blank">
-                  <img class="proj-image" src="/static/images/tic-tac-toe.png" alt="tic tac toe">
-                </a>
-              </div>
-              <div class='project-info'>
-                <h3>Tic-Tac-Toe</h3>
-                <div class='project-links'>
-                  <a href="{{ url_for('playGame') }}">Play Game</a>
-                  <a href="https://github.com/chrisgig23/TicTacToe" target="_blank">View Code</a>
-                </div>
-                <div class='project-descrip'>
-                  <p>
-                    A custom approach to the classic game, which utilizes a sophisticated AI to make the computer player nearly impossible to defeat.
-                  </p>
-                </br>
-                  <p>
-                    HTML, Vanilla JS, CSS
-                  </p>
-                </div>
-              </div>
             </div>
-
           </div>
-        </div>
 
-        <div id="about-me">
-          <div class="about-me-blurb">
-            <div class="about-me-photo">
-              <img src="/static/images/self_pic.jpg" alt="Picture of Me">
-            </div>
-            <p>
-              I'm a self-taught Full-Stack Web Developer, specializing in Front End development.
-            </p>
-            <p>
-              After graduating from St. John's University, I began my career doing VBA & SQL development for an energy management firm. Since then, I have expanded my skills to include a full suite of the latest web development technologies.
+          <div id="about-me">
+            <div class="about-me-blurb">
+              <div class="about-me-photo">
+                <img src="/static/images/self_pic.jpg" alt="Picture of Me">
+              </div>
+              <p>
+                I'm a self-taught Full-Stack Web Developer, specializing in Front End development.
+              </p>
+              <p>
+                After graduating from St. John's University, I began my career doing VBA & SQL development for an energy management firm. Since then, I have expanded my skills to include a full suite of the latest web development technologies.
               </p>
               <p>
                 I am looking forward to pursuing future career opportunities in web development.
               </p>
-            </p>
+            </div>
           </div>
-        </div>
 
-      </main>
+        </main>
 
 {% endblock %}
