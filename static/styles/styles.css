@@ -195,6 +195,15 @@ li a {
   padding: 10px;
 }
 
+.project-links a {
+  color: black;
+  text-decoration: underline;
+}
+
+.project-links a:hover {
+  font-weight: bold;
+}
+
 .follow-icons {
   display: flex;
   flex-direction: row;
