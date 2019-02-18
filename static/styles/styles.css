@@ -204,6 +204,10 @@ li a {
   font-weight: bold;
 }
 
+.hands-on {
+  background-color: #c6ddea;
+}
+
 .follow-icons {
   display: flex;
   flex-direction: row;
