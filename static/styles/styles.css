@@ -4,17 +4,11 @@
   box-sizing: border-box;
 }
 
-.page {
-  /*background: linear-gradient(lightblue,darkgray);*/
-}
-
 .sticky + main {
   padding-top: 111px;
 }
 
 body {
-  /*font-family: "Barlow Condensed", sans-serif;*/
-  /*font-family: "Amatic SC", cursive;*/
   font-family: "Fira Sans", sans-serif;
 }
 
@@ -125,8 +119,6 @@ li a {
     font-size: 15px;
     display:flex;
     flex-direction: column;
-    /*align-items: center;*/
-    /*width: 100%;*/
     background-color: #252b2a;
     color: wheat;
 }
@@ -144,7 +136,6 @@ li a {
 .about-me-photo {
   width: 50%;
   text-align: center;
-  /*min-height: 123px;*/
   min-width: 123px;
 }
 
@@ -167,22 +158,18 @@ li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*flex-wrap: wrap;*/
 }
 
 .project-item {
   border: 1px dotted black;
   width: 100%;
-  /*height: 150px;*/
   display: flex;
-  /*justify-content: space-between;*/
   flex-direction: row;
   align-items: center;
 }
 
 .project-logo {
   width:12%;
-  /*height: 100%;*/
   padding: 10px;
   min-width: 120px;
   max-width: 150px;
@@ -207,30 +194,6 @@ li a {
   flex-direction: column;
   padding: 10px;
 }
-
-/*.project-links{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}*/
-
-/*.project {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}*/
-
-/*.project-image {
-  display: block;
-  height: 40%;
-  width: auto;
-  border-radius: 15%;
-  max-width: 100%;
-}*/
 
 .follow-icons {
   display: flex;
@@ -268,10 +231,6 @@ footer {
   color: black !important
 }
 
-/*.fa:hover {
-  color: #3781A9;
-}*/
-
 .credits {
   margin: 10px 0px;
 }
@@ -284,10 +243,6 @@ footer {
     margin: 5px 10px;
   }
 
-  /*.project-container {
-    justify-content: flex-start;
-  }*/
-
   .project-item {
     height: 150px;
   }
@@ -299,19 +254,6 @@ footer {
   .about-me-blurb {
     width: 100%;
   }
-
-  /*.proj-image{
-    height: auto;
-    width: 90%;
-  }
-
-  .proj-image-link {
-    height: 100%;
-  }
-
-  .project-links a {
-    font-size: 10px;
-  }*/
 
   .follow-icons {
     width: 400px;
@@ -410,10 +352,6 @@ footer {
     margin: 0px 5px;
   }
 
-  .about-me-blurb {
-    /*width: 417px;*/
-  }
-
   .about-me-photo {
     width: 50%;
     text-align: center;
@@ -426,7 +364,6 @@ footer {
   }
 
   .follow-icons {
-    /*width: 40%;*/
     display: flex;
     flex-direction: column;
   }
@@ -438,10 +375,6 @@ footer {
 
   .follow-icons a:hover {
     color: #3781A9;
-  }
-
-  .code-img {
-    /*margin: 20px;*/
   }
 
   /*Nav-Bar*/
