@@ -25,11 +25,19 @@ def playGame():
     return render_template('game.html')
 
 
-CLIENT_ID = json.loads(
-    open('client_secrets.json', 'r').read())['web']['client_id']
+# CLIENT_ID = json.loads(
+#     open('client_secrets.json', 'r').read())['web']['client_id']
+# APPLICATION_NAME = "Sporting Goods Application"
+#
+# engine = create_engine('sqlite:///catalogwithusers.db', connect_args={'check_same_thread':False})
+
+# When going live, uncomment the belwo
+CLIENT_ID = json.loads(open('/var/www/profile/profile/client_secrets.json', 'r').read())['web']['client_id']
+
 APPLICATION_NAME = "Sporting Goods Application"
 
-engine = create_engine('sqlite:///catalogwithusers.db', connect_args={'check_same_thread':False})
+engine = create_engine('postgresql://catalog:password@localhost/catalog')
+
 Base.metadata.bind = create_engine
 
 DBSession = sessionmaker(bind=engine)
