@@ -1,5 +1,6 @@
-{% block extends catalogBase.html %}
+{% extends "catalogBase.html" %}
 
+{% block content %}
     <div class="page-info">
       <div class="page-links">
         <a href="{{ url_for('editItem', category_name=category.name, item_name=item.name) }}">Edit</a>
