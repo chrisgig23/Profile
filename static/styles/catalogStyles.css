@@ -207,3 +207,13 @@ justify-content: center;
     opacity: 0;
   }
 }
+
+/*TABLET STYLES*/
+@media only screen and (min-width:460px) and (max-width: 960px) {
+
+}
+
+/*DESKTOP STYLES*/
+@media only screen and (min-width: 961px) {
+
+}
