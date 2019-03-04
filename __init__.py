@@ -18,25 +18,29 @@ app = Flask(__name__)
 
 @app.route('/')
 def welcomeHome():
-    return render_template('index.html')
+    return render_template('profile.html')
 
 @app.route('/tictactoe')
 def playGame():
     return render_template('game.html')
 
+@app.route('/maps_app')
+def neighborhoodMap():
+    return render_template('map.html')
 
-# CLIENT_ID = json.loads(
-#     open('client_secrets.json', 'r').read())['web']['client_id']
-# APPLICATION_NAME = "Sporting Goods Application"
-#
-# engine = create_engine('sqlite:///catalogwithusers.db', connect_args={'check_same_thread':False})
-
-# When going live, uncomment the belwo
-CLIENT_ID = json.loads(open('/var/www/profile/profile/client_secrets.json', 'r').read())['web']['client_id']
-
+#FOR TESTING
+CLIENT_ID = json.loads(
+    open('client_secrets.json', 'r').read())['web']['client_id']
 APPLICATION_NAME = "Sporting Goods Application"
 
-engine = create_engine('postgresql://catalog:password@localhost/catalog')
+engine = create_engine('sqlite:///catalogwithusers.db', connect_args={'check_same_thread':False})
+
+# When going live, uncomment the belwo
+# CLIENT_ID = json.loads(open('/var/www/profile/profile/client_secrets.json', 'r').read())['web']['client_id']
+#
+# APPLICATION_NAME = "Sporting Goods Application"
+#
+# engine = create_engine('postgresql://catalog:password@localhost/catalog')
 
 Base.metadata.bind = create_engine
 
