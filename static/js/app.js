@@ -384,7 +384,7 @@ function formatTime(time) {
 
 // Function takes in rating from Yelp API, and retrieves corresponding stars image
 function yelpStarGenerator (starCount){
-  var imgSrc = 'static/images/assets/yelp_stars/web_and_ios/small';
+  var imgSrc = 'static/images/assets/yelp_stars/web_and_ios/small/';
   switch (starCount) {
     case 0:
       imgSrc = imgSrc + '0stars.png';
