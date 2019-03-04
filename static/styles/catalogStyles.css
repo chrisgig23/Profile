@@ -5,8 +5,9 @@
 }
 
 body {
-  font-family: "Barlow Condensed", sans-serif;
-  background-color: lightgray;
+  /*font-family: "Barlow Condensed", sans-serif;*/
+  font-family: 'Roboto', sans-serif;
+  background-color: #08173c;
 }
 
 a {
@@ -15,10 +16,10 @@ a {
 }
 
 .header-container {
-  border-bottom: 1px solid black;
+  /*border-bottom: 1px solid black;*/
   display: flex;
   justify-content: space-between;
-  background-color: #2f5da8;
+  background-color: #f1a371;
   align-items: center;
 }
 
@@ -29,7 +30,7 @@ a {
 
 .main-header {
   padding: 5px 10px;
-  color:darkred;
+  color:#08173c;
 }
 
 .login-logout {
@@ -48,6 +49,11 @@ a {
 .page-header {
   font-weight: bold;
   margin: 10px;
+}
+
+.page-content{
+  display: flex;
+  flex-direction: row;
 }
 
 .page-info {
@@ -107,9 +113,33 @@ a {
   margin: 5px;
 }
 
+.category {
+  height: 47px;
+  width: 196px;
+  background-color: #737f82;
+  display: flex;
+  border: 1px black solid;
+  align-items: center;
+  padding: 5px;
+}
+
+.category:hover {
+  background-color: #338dbb;
+}
+
+.category-sidebar {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-sidebar h2 {
+  color: white;
+}
+
 .profile-return {
   width: 150px;
-justify-content: center;
+  justify-content: center;
 }
 
 .public {
@@ -128,16 +158,6 @@ justify-content: center;
   text-align: center;
 }
 
-.page-content {
-  border: 1px solid black;
-  background-color: white;
-  width: 700px;
-  display:flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding: 5px;
-}
-
 .item-info {
   border: 1px solid black;
   background-color: white;
@@ -153,9 +173,25 @@ justify-content: center;
   flex-direction: column;
 }
 
+.items-list a {
+  font-size: 20px;
+  color: #3ff0f3;
+}
+
+.items-list a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  color: lightgray;
+  /*text-shadow: 0 0 1px white;*/
+}
+
 .items-column {
   border-left: 1px solid black;
   padding-left: 10px;
+}
+
+.items-header {
+  color: white;
 }
 
 .item-footer {
@@ -167,8 +203,8 @@ justify-content: center;
   margin: 10px;
 }
 
-.category-sidebar {
-  margin-right: 20px;
+.new-page-info, .delete-page-info, .edit-page-info {
+  color: #f1a371;
 }
 
 #signinButton {
@@ -206,4 +242,17 @@ justify-content: center;
   50% {
     opacity: 0;
   }
+}
+
+/*TABLET STYLES*/
+@media only screen and (min-width:460px) and (max-width: 960px) {
+  .category-list {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/*DESKTOP STYLES*/
+@media only screen and (min-width: 961px) {
+
 }

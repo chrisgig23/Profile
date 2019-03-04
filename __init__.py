@@ -216,7 +216,8 @@ def editItem(category_name, item_name):
         flash("You must be logged in to do that")
         return redirect('/login')
     category = session.query(Category).filter_by(name=category_name).one()
-    creator = getUserInfo(item.user_id)
+    editedItem = session.query(CategoryItem).filter_by(name=item_name).one()
+    creator = getUserInfo(editedItem.user_id)
     if (creator.id != login_session['user_id']):
         # If user did not create the item, they cannot edit
         flash("You are not authorized to edit this item.")

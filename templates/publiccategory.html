@@ -1,43 +1,6 @@
-<html>
-<head>
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles/catalogStyles.css') }}">
-</head>
+{% extends "catalogBase.html" %}
 
-<body>
-  <div class="page">
-    <div class="header-container">
-      <a href="{{ url_for('showCatalog') }}"><h1 class="main-header">Catalog App</h1></a>
-
-      <div class="session-status">
-        {% if 'username' not in session: %}
-          <div class="login-logout">
-            <a href="{{ url_for('showLogin') }}">Login</a>
-          </div>
-        {% else %}
-          <div class="welcome">
-            <p>Hello, {{ session.username }}</p>
-          </div>
-          <div class="login-logout">
-            <a href="{{ url_for('gdisconnect') }}">Logout</a>
-          </div>
-        {% endif %}
-      </div>
-    </div>
-
-    <div class="flash">
-      <!--MESSAGE FLASHING-->
-      {% with messages = get_flashed_messages() %}
-        {% if messages %}
-
-          <ul>
-          {% for message in messages %}
-            <li><strong>{{message}}</strong></li>
-          {% endfor %}
-          </ul>
-        {% endif %}
-      {% endwith %}
-    </div>
-
+{% block content %}
     <div class="page-info">
       <div class="public page-links">
         <a class="main-menu" href="{{ url_for('showCatalog') }}">Main Menu</a>
@@ -48,7 +11,7 @@
           <h2>Categories</h2>
           {%for c in categories%}
 
-            <a href="{{ url_for('showCategory', category_name=c.name) }}"><h2>{{ c.name }}</h2></a>
+            <a class="category" href="{{ url_for('showCategory', category_name=c.name) }}"><h2>{{ c.name }}</h2></a>
 
           {%endfor%}
         </div>
@@ -56,7 +19,7 @@
         <!-- <div class="vl"></div> -->
 
         <div class="items-column">
-          <div class="item-header">
+          <div class="items-header">
             <h2>{{ category.name }} Items</h2>
           </div>
 
@@ -74,10 +37,4 @@
 
       </div>
     </div>
-  </div>
-
-
-  </div>
-</body>
-
-</html>
+{% endblock %}
