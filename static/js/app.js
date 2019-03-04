@@ -1,3 +1,142 @@
+function initMap() {
+  // Styles array to use with the map -- Style WY from Snazzy Maps
+  var styles = [
+        {
+            "featureType": "landscape.natural",
+            "elementType": "geometry.fill",
+            "stylers": [
+                {
+                    "visibility": "on"
+                },
+                {
+                    "color": "#e0efef"
+                }
+            ]
+        },
+        {
+            "featureType": "poi",
+            "elementType": "geometry.fill",
+            "stylers": [
+                {
+                    "visibility": "on"
+                },
+                {
+                    "hue": "#1900ff"
+                },
+                {
+                    "color": "#c0e8e8"
+                }
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "lightness": 100
+                },
+                {
+                    "visibility": "simplified"
+                }
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "labels",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "transit.line",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "visibility": "on"
+                },
+                {
+                    "lightness": 700
+                }
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "color": "#7dcdcd"
+                }
+            ]
+        }
+    ];
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 40.586074, lng: -74.156711},
+    zoom: 13,
+    styles: styles,
+    mapTypeControl: false,
+    maxZoom: 15
+  });
+
+  var largeInfoWindow = new google.maps.InfoWindow();
+  // Bounds of the map
+
+  var defaultIcon = makeMarkerIcon('93a7c6');
+
+  var highlightedIcon = makeMarkerIcon('2465c9');
+
+  for (var i=0; i<myRestaurants.length; i++) {
+    // Get the position from locations array
+    var position = myRestaurants[i].location;
+    var title = myRestaurants[i].name;
+    var yelpID = myRestaurants[i].yelpID;
+    var marker = new google.maps.Marker({
+      // map:map,
+      position:position,
+      title:title,
+      icon: defaultIcon,
+      animation: google.maps.Animation.DROP,
+      yelpID: yelpID,
+      id: i
+    });
+
+    // Push the marker to array of markers
+    markers.push(marker);
+    // Creates an onclick event to show the infoWindow for each marker.
+    marker.addListener('click', function() {
+      populateInfoWindow(this, largeInfoWindow);
+    });
+    marker.addListener('mouseover', function() {
+      this.setIcon(highlightedIcon);
+    });
+    marker.addListener('mouseout', function() {
+      this.setIcon(defaultIcon);
+    });
+  }
+  showRestaurants(); // Display markers by default
+
+  document.getElementById('show-restaurants').addEventListener('click', function() {
+    showRestaurants();
+    largeInfoWindow.close();
+  });
+  document.getElementById('hide-restaurants').addEventListener('click', hideRestaurants);
+
+  // Allow Enter key to submit text entry.
+  document.getElementById('zoom-to-area-text').addEventListener('keypress', function (e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) { // 13 is Enter key
+      zoomToArea();
+    }
+  });
+
+  document.getElementById('zoom-to-area').addEventListener('click', function() {
+    zoomToArea();
+  });
+}
+
+
 var Restaurant = function(data) {
   this.name = ko.observable(data.name);
   this.location = ko.observable(data.location);
@@ -421,142 +560,6 @@ function yelpStarGenerator (starCount){
   return imgSrc;
 }
 
-function initMap() {
-  // Styles array to use with the map -- Style WY from Snazzy Maps
-  var styles = [
-        {
-            "featureType": "landscape.natural",
-            "elementType": "geometry.fill",
-            "stylers": [
-                {
-                    "visibility": "on"
-                },
-                {
-                    "color": "#e0efef"
-                }
-            ]
-        },
-        {
-            "featureType": "poi",
-            "elementType": "geometry.fill",
-            "stylers": [
-                {
-                    "visibility": "on"
-                },
-                {
-                    "hue": "#1900ff"
-                },
-                {
-                    "color": "#c0e8e8"
-                }
-            ]
-        },
-        {
-            "featureType": "road",
-            "elementType": "geometry",
-            "stylers": [
-                {
-                    "lightness": 100
-                },
-                {
-                    "visibility": "simplified"
-                }
-            ]
-        },
-        {
-            "featureType": "road",
-            "elementType": "labels",
-            "stylers": [
-                {
-                    "visibility": "off"
-                }
-            ]
-        },
-        {
-            "featureType": "transit.line",
-            "elementType": "geometry",
-            "stylers": [
-                {
-                    "visibility": "on"
-                },
-                {
-                    "lightness": 700
-                }
-            ]
-        },
-        {
-            "featureType": "water",
-            "elementType": "all",
-            "stylers": [
-                {
-                    "color": "#7dcdcd"
-                }
-            ]
-        }
-    ];
 
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 40.586074, lng: -74.156711},
-    zoom: 13,
-    styles: styles,
-    mapTypeControl: false,
-    maxZoom: 15
-  });
-
-  var largeInfoWindow = new google.maps.InfoWindow();
-  // Bounds of the map
-
-  var defaultIcon = makeMarkerIcon('93a7c6');
-
-  var highlightedIcon = makeMarkerIcon('2465c9');
-
-  for (var i=0; i<myRestaurants.length; i++) {
-    // Get the position from locations array
-    var position = myRestaurants[i].location;
-    var title = myRestaurants[i].name;
-    var yelpID = myRestaurants[i].yelpID;
-    var marker = new google.maps.Marker({
-      // map:map,
-      position:position,
-      title:title,
-      icon: defaultIcon,
-      animation: google.maps.Animation.DROP,
-      yelpID: yelpID,
-      id: i
-    });
-
-    // Push the marker to array of markers
-    markers.push(marker);
-    // Creates an onclick event to show the infoWindow for each marker.
-    marker.addListener('click', function() {
-      populateInfoWindow(this, largeInfoWindow);
-    });
-    marker.addListener('mouseover', function() {
-      this.setIcon(highlightedIcon);
-    });
-    marker.addListener('mouseout', function() {
-      this.setIcon(defaultIcon);
-    });
-  }
-  showRestaurants(); // Display markers by default
-
-  document.getElementById('show-restaurants').addEventListener('click', function() {
-    showRestaurants();
-    largeInfoWindow.close();
-  });
-  document.getElementById('hide-restaurants').addEventListener('click', hideRestaurants);
-
-  // Allow Enter key to submit text entry.
-  document.getElementById('zoom-to-area-text').addEventListener('keypress', function (e) {
-    var key = e.which || e.keyCode;
-    if (key === 13) { // 13 is Enter key
-      zoomToArea();
-    }
-  });
-
-  document.getElementById('zoom-to-area').addEventListener('click', function() {
-    zoomToArea();
-  });
-}
 
 ko.applyBindings(new ViewModel(map));
