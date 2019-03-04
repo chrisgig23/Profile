@@ -252,7 +252,7 @@ function populateInfoWindow(marker, infoWindow) {
       "async": true,
       "crossDomain": true,
       // Pass in the Yelp business ID for the clicked restaurant
-      "url": "https://api.yelp.com/v3/businesses/" + yelpID,
+      "url": "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/" + yelpID,
       "method": "GET",
       "headers": {
         "Authorization": "Bearer nOpnNpO7xDeJt_YSypp1XJnL5__h4-i7QTvUYi7RS5VwFuk6ID4Q8IrbM5epxCFpQENG1Q7gy-NWeR8NefBLBo-ZK8x8-0ck3cfQ9mkvTzBDKxBvGIXzrtjO3bcWW3Yx",
