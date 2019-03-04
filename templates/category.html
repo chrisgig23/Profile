@@ -8,12 +8,12 @@
           <a class="main-menu" href="{{ url_for('showCatalog') }}">Main Menu</a>
         </div>
 
-        <div class = "page-content">
-          <div class = "category-sidebar">
+        <div class="page-content">
+          <div class="category-sidebar">
             <h2>Categories</h2>
             {%for c in categories%}
 
-              <a href="{{ url_for('showCategory', category_name=c.name) }}"><h2>{{ c.name }}</h2></a>
+              <a class="category" href="{{ url_for('showCategory', category_name=c.name) }}"><h2>{{ c.name }}</h2></a>
 
             {%endfor%}
           </div>
@@ -21,7 +21,7 @@
           <!-- <div class="vl"></div> -->
 
           <div class="items-column">
-            <div class="item-header">
+            <div class="items-header">
               <h2>{{ category.name }} Items</h2>
             </div>
 

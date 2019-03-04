@@ -6,7 +6,7 @@
 
 body {
   /*font-family: "Barlow Condensed", sans-serif;*/
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #08173c;
 }
 
@@ -49,6 +49,11 @@ a {
 .page-header {
   font-weight: bold;
   margin: 10px;
+}
+
+.page-content{
+  display: flex;
+  flex-direction: row;
 }
 
 .page-info {
@@ -115,6 +120,7 @@ a {
   display: flex;
   border: 1px black solid;
   align-items: center;
+  padding: 5px;
 }
 
 .category:hover {
@@ -125,7 +131,6 @@ a {
   margin-right: 20px;
   display: flex;
   flex-direction: column;
-  color:;
 }
 
 .category-sidebar h2 {
@@ -168,9 +173,25 @@ a {
   flex-direction: column;
 }
 
+.items-list a {
+  font-size: 20px;
+  color: #3ff0f3;
+}
+
+.items-list a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  color: lightgray;
+  /*text-shadow: 0 0 1px white;*/
+}
+
 .items-column {
   border-left: 1px solid black;
   padding-left: 10px;
+}
+
+.items-header {
+  color: white;
 }
 
 .item-footer {
@@ -182,6 +203,9 @@ a {
   margin: 10px;
 }
 
+.new-page-info, .delete-page-info, .edit-page-info {
+  color: #f1a371;
+}
 
 #signinButton {
   margin: 10px;
