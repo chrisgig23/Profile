@@ -32,7 +32,7 @@ def neighborhoodMap():
 # CLIENT_ID = json.loads(
 #     open('client_secrets.json', 'r').read())['web']['client_id']
 # APPLICATION_NAME = "Sporting Goods Application"
-#
+
 # engine = create_engine('sqlite:///catalogwithusers.db', connect_args={'check_same_thread':False})
 
 # When going live, uncomment the belwo
